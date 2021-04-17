@@ -47,6 +47,7 @@ By leveraging the previously described dataset, we set our main objective toward
 
 Here is an example log of a game: 
 "Rated Classical game"]\n[Site "https://lichess.org/Gg06eUOY"] [...] \n[TimeControl "420+8"]\n[Termination "Time forfeit"]\n\n1. e4 g6 2. [...]
+
 Thus the metadata is listed at the beginning, followed by the game PGN. The preprocessing extracts all the metadata and the PGN and creates a csv containing everything. The preprocessing is done the notebook parse_raw_data.iypnb
 
 The exploratory data analysis is done in the notebook EDA.ipynb.
