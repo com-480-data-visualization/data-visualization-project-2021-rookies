@@ -1,0 +1,85 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: #fff;
+    width: 100%;
+    min-height: 100%;
+    margin-top: 10px;
+  }
+  
+  #main {
+    float: left;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #row {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #sidebar {
+    float: right;
+    width: 100px;
+  }
+  
+  #sequence {
+    width: 75%;
+    height: 40px;
+  }
+  
+  #legend {
+    padding: 10px 0 0 3px;
+  }
+  
+  #sequence text {
+    font-weight: 600;
+    fill: #fff;
+  }
+  #legend text {
+      font-weight: 600;
+      fill: #666;
+  }
+  
+  #chart {
+    position: relative;
+  }
+  
+  #chart path {
+    stroke: #fff;
+  }
+  
+  #explanation {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 140px;
+    text-align: center;
+    color: #666;
+    z-index: -1;
+  }
+  
+  #percentage {
+    font-size: 2.5em;
+  }
+
+  #chess-container {
+    width: 35%; 
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #button-container {
+      margin-top: 10px;
+      width: 100%;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+  }

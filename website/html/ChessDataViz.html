@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Chess analysis</title>
+  <meta name="description" content="Chess analysis">
+  <meta name="author" content="Tuantu">
+
+  <link href="../css/skeleton.min.css" rel="stylesheet">
+  <link href="../css/ChessDataViz.css" rel="stylesheet">
+
+</head> 
+
+<body>
+
+    <button onclick="window.location.href = '../index.html'">
+        Home
+    </button>
+    <div class="cdv-openings" id="openings">
+    </div>
+    <div class="caption">
+      World Rapid Chess Championship 2015 openings breakdown.
+      <br> Looking at variation: <span id="variation"></span>
+      <br> Percentage of games with this variation: <span id="percentage"></span>
+      <br>
+      <button id="all" class="button button-primary">All Openings</button>
+      <button id="d4" class="button">d4 Variations</button>
+    </div>
+
+    <div id="heatmap-example-2" class="cdv-heatmap"></div>
+    <div class="caption">
+        World Rapid Chess Championship 2015, checking squares of queens (how many times a queen delivered a check on a square)
+        <br>
+        <button id="w-btn" class="button button-primary">White Queens</button>
+        <button id="b-btn" class="button">Black Queens</button>
+    </div>
+
+    <div class="cdv-move-paths" id="movepaths"></div>
+    <div class="caption">Journey of the white queen's knight during World Rapid Chess Championship 2015.</div>
+
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="../js/ChessDataViz.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
