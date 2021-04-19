@@ -2,9 +2,9 @@
 
 | Student's name | SCIPER |
 | -------------- | ------ |
-| | |
-| | |
-| | |
+| Benhaim Julien|284558 |
+| Michelet Elisa| 282651|
+| Vignoud Julien|282142 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
@@ -46,11 +46,11 @@ By leveraging the previously described dataset, we set our main objective toward
 > - Show some basic statistics and get insights about the data
 
 Here is an example log of a game: 
-"Rated Classical game"]\n[Site "https://lichess.org/Gg06eUOY"] [...] \n[TimeControl "420+8"]\n[Termination "Time forfeit"]\n\n1. e4 g6 2. [...]
+`"Rated Classical game"]\n[Site "https://lichess.org/Gg06eUOY"] [...] \n[TimeControl "420+8"]\n[Termination "Time forfeit"]\n\n1. e4 g6 2. [...]`
 
 Thus the metadata is listed at the beginning, followed by the game PGN. The preprocessing extracts all the metadata and the PGN and creates a csv containing everything. The preprocessing is done the notebook parse_raw_data.iypnb
 
-The exploratory data analysis is done in the notebook EDA.ipynb.
+The exploratory data analysis is done in [this notebook](notebooks/EDA.ipynb).
 
 
 ### Related work
