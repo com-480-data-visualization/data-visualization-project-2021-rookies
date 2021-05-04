@@ -69,30 +69,8 @@ function onDrop (source, target) {
     removeGreySquares()
   }
   
-  function findNode(parent, name){
-    for (let i = 0; i < parent.children.length; i++) {
-        const child = parent.children[i]
-        if (child.data.name == name) return child
-    }
-  }
   function onSnapEnd () {
     board.position(game.fen())
-    if(root != null) {
-        moves = game.history()
-        node = root
-        for (let i = 0; i < moves.length; i++) {
-            node = findNode(node, moves[i])
-            if (node == undefined) break;
-        }
-        if (node == undefined) {
-            d3.select('#percentage').text("< 0.1%")
-            d3.select('#opening').text("This sequence didn't occur enough times in the dataset")
-        } else if(node.data.name == "root"){
-            resetAll()
-        } else{
-            displayInformation(node)
-        }
-    }
   }
 
   function undoMove(){
