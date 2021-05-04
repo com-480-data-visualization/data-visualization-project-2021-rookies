@@ -104,7 +104,7 @@ On this third visualisation, one can have a more general overview on the differe
 The next visualisation is a graph of all the players, to provide a way to explore the dataset endlessly. The nodes would represent the players, and the games will be the links between them, if they have played one against the other. When clicking on the node or the link, there will be information about the player or the game displayed on the right. There will also be a possibility to filter on the games or players, to look at smaller graphs of interest.
 
 
-![Sketch Timeline Pages](img/sketch_timeline.png)
+![Sketch Timeline Pages](img/sketch_timeline.png =20x20)
 
 Finally, there will be a way to learn more about chess history and visualize events all over the world. There will be a timeline on the right that one can zoom in and out, select one event, read about it and visualize it geographically on the map.
 
