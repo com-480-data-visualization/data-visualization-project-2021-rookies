@@ -2,13 +2,114 @@
 <head>
   <meta charset="utf-8">
 
-  <link href="../../styles.css" rel="stylesheet">
+  <title>Stats on pieces</title>
+  <meta name="description" content="Stats on pieces">
+  <meta name="author" content="Elisa">
+  <link href="../common/chessboard-1.0.0.min.css" rel="stylesheet" >
+  <link href="statspieces.css" rel="stylesheet">
+  <link href="../common/back.css" rel="stylesheet">
+  
+</head>
+
 </head> 
 
 <body>
-    <button onclick="window.location = '../../index.html#Visualizations'">
-        Back
-    </button>
+
+  <nav class="nav-fillpath" id="topline" style="max-height: 20px; background-color: #ffcdb2; position: fixed; z-index: 200;">
+    <a class="prev" href="../../index.html#Visualizations">
+        <span class="icon-wrap"></span>
+        <div>Back</div>
+    </a>
+  </nav>
+
+  <div class=pieces id=allPieces>
+      <img src="../../assets/img/chesspieces/wikipedia/bR.png" id = "piece-img-0" onclick="selectImage(0)">  
+      <img src="../../assets/img/chesspieces/wikipedia/bN.png" id = "piece-img-1" onclick="selectImage(1)">
+      <img src="../../assets/img/chesspieces/wikipedia/bB.png" id = "piece-img-2" onclick="selectImage(2)">
+      <img src="../../assets/img/chesspieces/wikipedia/bQ.png" id = "piece-img-3" onclick="selectImage(3)">
+      <img src="../../assets/img/chesspieces/wikipedia/bK.png" id = "piece-img-4" onclick="selectImage(4)">
+      <img src="../../assets/img/chesspieces/wikipedia/bP.png" id = "piece-img-5" onclick="selectImage(5)">
+      <img src="../../assets/img/chesspieces/wikipedia/wR.png" id = "piece-img-6" onclick="selectImage(6)">
+      <img src="../../assets/img/chesspieces/wikipedia/wN.png" id = "piece-img-7" onclick="selectImage(7)">
+      <img src="../../assets/img/chesspieces/wikipedia/wB.png" id = "piece-img-8" onclick="selectImage(8)">
+      <img src="../../assets/img/chesspieces/wikipedia/wQ.png" id = "piece-img-9" onclick="selectImage(9)">
+      <img src="../../assets/img/chesspieces/wikipedia/wK.png" id = "piece-img-10" onclick="selectImage(10)">
+      <img src="../../assets/img/chesspieces/wikipedia/wP.png" id = "piece-img-11" onclick="selectImage(11)">
+    </div>
+    
+    <section class='content'>
+
+      <div class="row">
+        <div class="column-for-text">
+          <div id="current-piece"> </div>
+        </div>
+        <div class="column-for-text" id="general-piece-description">
+          Text about the piece in general
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column-for-text" id="moves-description">
+            Text about how the piece moves
+        </div>
+        <div class="column-for-text" > <!-- style="border:5px inset #ffcdb2; border-style: solid solid solid solid; border-radius: 25px;"-->
+          <div class="content-chess" style="width:350px;" >
+            <div id="board1"></div>
+          </div> 
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column-for-text" >
+          <div class="favVictim" id="favVictim"></div>
+          <div class="worstEnnemy" id="worstEnnemy"></div>
+          <div class="nMoves" id="nMoves"></div>
+          <div class="lifespan" id="lifespan"></div>
+        </div>
+        <div class="column-for-text" id="stats-description" >
+          Text about stats on pieces !
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column-for-text" id="precise-stats-decription" >
+          More precise stats
+        </div>
+        <div class="column"  style= "overflow-y: scroll">
+          <div class="statsEats" id="stat-eat"></div>
+          <div class="statsEatenBy" id="stat-eaten-by"></div>
+        </div>
+      </section>
+
+    </div>
+
+   
+
+    <script>
+      window.onscroll = function() {myFunction()};
+  
+        var header = document.getElementById("allPieces");
+        var topline = document.getElementById("topline");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+    
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="../common/chessboard.js"></script>
+    <script src="../pieces/percentage_bar.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../common/chessboard-1.0.0.min.js"></script>
+    <script src="../common/chess.js"></script>
+    
 
 </body>
 </html>
