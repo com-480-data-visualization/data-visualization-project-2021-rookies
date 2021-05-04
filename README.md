@@ -147,6 +147,8 @@ This timeline has the objective to create interest for chess in a visual manner,
 The idea of the graph is to offer an alternative and intuitive way to navigate through parts of the dataset. It can also offer some insights on the data. As presented in previous sections, the implementation can be broken down into the following parts : graph generation, dynamic filtering, information box on the nodes/edges, and chessboard.
 
 
+Link to the [website](https://com-480-data-visualization.github.io/data-visualization-project-2021-rookies/)
+
 
 ## Milestone 3 (4th June, 5pm)
 
