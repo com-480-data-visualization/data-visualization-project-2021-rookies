@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Chess analysis</title>
+  <meta name="description" content="Chess analysis">
+  <meta name="author" content="Tuantu">
+  <link href="heatmap.css" rel="stylesheet"/>
+  <link href="../../styles.css" rel="stylesheet">
+  <link href="../common/back.css" rel="stylesheet">
+
+
+</head> 
+
+<body>
+    <!-- <button onclick="window.location = '../../index.html#Visualizations'">
+        Back
+    </button> -->
+    <!-- <div class="color-1"> -->
+        <nav class="nav-fillpath" style="max-height: 20px; background-color: #b5838d;">
+            <a class="prev" href="../../index.html#Visualizations">
+                <span class="icon-wrap"></span>
+                <div>Back</div>
+            </a>
+        </nav>
+    <!-- </div> -->
+    <div id="container">
+        <div id="heatmap-container">
+            <div id="heatmap"></div>
+            <div id="button-container">
+                <button id='elo_1000' class="button-primary"> &lt 1000 elo</button>
+                <button id='elo_3000'>&gt 1000 elo</button>
+            </div>
+        </div>
+        <div id="tips-container">
+            <div id="tips-text" class="desc">This heatmap shows how often is each square of the board occupied.
+                The darker the square, the more often players set a piece onto it.
+                Use the buttons to choose the range of ELO used as input data. <br><br>
+                Notice how the center of the board is more prized by higher level players 
+                than beginners. It is indeed often missed by new players: you should always try to control the center of 
+                the board. Center control yields greater influence over the board and a greater mobility for your pieces.
+                <br><br>
+                <i>Tips: Hover over a square to see the occupation percentation.<i>
+            </div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="heatmap.js"></script>
+</body>
+</html>

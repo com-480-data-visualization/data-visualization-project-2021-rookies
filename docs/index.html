@@ -6,21 +6,135 @@
   <meta name="description" content="Chess analysis">
   <meta name="author" content="Tuantu">
 
-  <link href="css/styles.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.css"/>
 
 </head> 
 
 <body>
+    <div class="overlay-navigation">
+        <nav role="navigation">
+            <ul>
+                <li><a href="./viz/pieces/pieces.html" data-content="Learn more about chess pieces">Basics</a></li>
+                <li><a href="./viz/timeline/timeline.html" data-content="A geographical timeline of chess history">Timeline</a></li>
+                <li><a href="./viz/graph/graph.html" data-content="Explore the games in the dataset">Dataset</a></li>
+                <li><a href="./viz/heatmap/heatmap.html" data-content="How important is board control?">Position</a></li>
+                <li><a href="./viz/sunburst/sunburst.html" data-content="How do the first moves influence the game?">Openings</a></li>
+            </ul> 
+            <a href="#PiecePosition" class="scroll up mouse effect1 light">
+                <label>Scroll</label>
+                <span></span>
+            </a>
+        </nav> 
+    </div>
+    
+    <div id="fullpage">
+        <section id="intro" class="section">
+            <div class="title">Chess analysis</div>
+            <a href="#PiecePosition" class="scroll down mouse effect1 light">
+                <label>Scroll</label>
+                <span></span>
+            </a>
+        </section>
+        
+        <section id="section1" class="section">
+            <!-- <div class="title">Scene 1</div> -->
+            <div class="desc">
+                <div class="desc-title">Welcome on Chess Analysis</div>
+                <div class="desc-text">Our objective is to provide data-driven insights, discover new facts and
+                    spark interest about chess. The dataset is composed of a 1 million chess games from
+                    Lichess, an online platform.</div><div class="desc-text">
+                    As there is a broad range of prior backgrounds, we tailored
+                    visualizations to different levels. If you are a real beginner, you may find useful to start 
+                    with this <a href="#Introduction" style="text-decoration: underline;color:#aaa;">introduction</a>.</div>
+            </div>
+            <a href="#Visualizations" class="scroll down mouse effect1">
+                <label>Scroll</label>
+                <span></span>
+            </a>
+            <!-- <div class="open-overlay"></div> -->
+        </section>
 
-    <button onclick="window.location.href = './html/heatmap.html'">
-        Heatmap
-    </button>
-    <button onclick="window.location.href = './html/sunburst.html'">
-        Sunburst
-    </button>
-    <button onclick="window.location.href = './html/chessboard.html'">
-        Chess board
-    </button>
+        <section id="section2" class="section"></section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#fullpage").fullpage({
+                navigation: false,
+                slidesNavigation: false,
+                controlArrows: false,
+                verticalCentered: false,
+                anchors: ["Introduction", "PiecePosition", "Visualizations"],
+                onLeave: function(origin, destination, direction){
+                    $(".scroll, .title, .desc-title, .desc-text").css("transition", "0.3s").css("opacity", 0)
+                    var overlay_active = $('.overlay-navigation').hasClass('overlay-active')
+                    if(origin.index == 1 && direction =='down' && !overlay_active) openOverlay()
+                    if(origin.index == 2 && direction =='up' && overlay_active) closeOverlay()
+                },
+                afterLoad: function(event){
+                    $(".scroll, .title, .desc-title").css("transition", "2s").css("opacity", 1)
+                    $(".desc-text").css("transition", "1s 1s").css("opacity", 1)
+                    // console.log(event)
+                }
+            })
+            const onVizSection = window.location.href.includes("#Visualizations")
+            const overlayActive = $('.overlay-navigation').hasClass('overlay-active')
+            if(onVizSection && !overlayActive){
+                console.log("Open overlay")
+                openOverlay()
+            }
+        });
 
+        window.addEventListener( "pageshow", function ( event ) {
+            var pagehistory = event.persisted || 
+                            ( typeof window.performance != "undefined" && 
+                                window.performance.navigation.type === 2 );
+            if (pagehistory) {
+                openOverlay()
+            }
+        });
+
+        function openOverlay(){
+            var overlay_navigation = $('.overlay-navigation'),
+            nav_item_1 = $('nav li:nth-of-type(1)'),
+            nav_item_2 = $('nav li:nth-of-type(2)'),
+            nav_item_3 = $('nav li:nth-of-type(3)'),
+            nav_item_4 = $('nav li:nth-of-type(4)'),
+            nav_item_5 = $('nav li:nth-of-type(5)');
+            overlay_navigation.addClass('overlay-active');
+            overlay_navigation.removeClass('overlay-slide-up').addClass('overlay-slide-down')
+            nav_item_1.removeClass('slide-in-nav-item-reverse').addClass('slide-in-nav-item');
+            nav_item_2.removeClass('slide-in-nav-item-delay-1-reverse').addClass('slide-in-nav-item-delay-1');
+            nav_item_3.removeClass('slide-in-nav-item-delay-2-reverse').addClass('slide-in-nav-item-delay-2');
+            nav_item_4.removeClass('slide-in-nav-item-delay-3-reverse').addClass('slide-in-nav-item-delay-3');
+            nav_item_5.removeClass('slide-in-nav-item-delay-4-reverse').addClass('slide-in-nav-item-delay-4');
+        }
+        function closeOverlay(){
+            var overlay_navigation = $('.overlay-navigation'),
+            nav_item_1 = $('nav li:nth-of-type(1)'),
+            nav_item_2 = $('nav li:nth-of-type(2)'),
+            nav_item_3 = $('nav li:nth-of-type(3)'),
+            nav_item_4 = $('nav li:nth-of-type(4)'),
+            nav_item_5 = $('nav li:nth-of-type(5)');
+            overlay_navigation.removeClass('overlay-active');
+            overlay_navigation.removeClass('overlay-slide-down').addClass('overlay-slide-up')
+            nav_item_1.removeClass('slide-in-nav-item').addClass('slide-in-nav-item-reverse');
+            nav_item_2.removeClass('slide-in-nav-item-delay-1').addClass('slide-in-nav-item-delay-1-reverse');
+            nav_item_3.removeClass('slide-in-nav-item-delay-2').addClass('slide-in-nav-item-delay-2-reverse');
+            nav_item_4.removeClass('slide-in-nav-item-delay-3').addClass('slide-in-nav-item-delay-3-reverse');
+            nav_item_5.removeClass('slide-in-nav-item-delay-4').addClass('slide-in-nav-item-delay-4-reverse');
+        }
+
+        function toggleOverlay(keepOpen = false) {
+            if (overlay_navigation.hasClass('overlay-active')) openOverlay()
+            else closeOverlay()
+        }
+    </script>
 </body>
+
+    
+
+
 </html>
