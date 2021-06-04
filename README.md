@@ -6,7 +6,7 @@ This project has been realized in the context of EPFL Data Visualization (COM-48
 </p>
 
 <p align="center">
-     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Check out the screencast</a>
+     <a href="https://www.youtube.com/watch?v=fz3awj4zVCc">Check out the screencast</a>
 </p>
 
 | Student's name | SCIPER |
