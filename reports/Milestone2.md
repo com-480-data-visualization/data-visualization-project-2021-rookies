@@ -9,27 +9,27 @@ The home page would be simple, only containing the title of the project, and a s
 
 ### Sketches of the visualizations
 
-<img src="../assets/preview/sketch_pieces.png" width="500">
+<img src="../img/sketch_pieces.png" width="500">
 
 The first one is the pieces moves page - for the beginners. There will be on top a line with all the chess pieces drawn, and they can select the ones they are interested about. When selected, the mentions of Worst enemy and Favorite victim appear under respectively, the piece that captured them the most, and the piece that they captured the most, over all the dataset. The selected piece will also appear bigger to the left, with an interactive chess board to the right, demonstrating the piece’s legal moves and how they can capture. When scrolling on the page, the user will see more detailed statistics about who they captured and were captured by.
 
 
-<img src="../assets/preview/sketch_openings.png" width="500">
+<img src="../img/sketch_openings.png" width="500">
 
 The second visualisation is a sunburst plot describing the different openings. It would be like a tree structure, in the form of a sun, where at the root there are the biggest families of openings, and the higher you hover on the rays, the more advanced you go through the opening. At the same time, while hovering on the openings, there will be statistics on how frequently the players who use these openings are winning. Additionally, when hovering on the sunburst, the related opening is played on a chess board on the right, to visualize better what they mean. It is also possible to go the other way around : the user can move pieces on the chess board and that will highlight in the sunburst plot the opening they are using, with the statistics that go with it. There will also be two buttons to undo or reset the moves on the chessboard, to let the user play however they want with the visualisation, and explore the different openings.
 
 
-<img src="../assets/preview/sketch_positions.png" width="500">
+<img src="../img/sketch_positions.png" width="500">
 
 On this third visualisation, one can have a more general overview on the different games at different levels. They can select the level they want to visualize with the buttons at the bottom, and compare which squares on the chess board are the most occupied. That will allow them to understand, for example, that players at a high level are controlling the center of the board, so these are important squares to focus on while playing. The visualisation itself would be a heatmap corresponding to a chess board, where the squares are darker when they are occupied a lot.
 
 
 
-<img src="../assets/preview/sketch_players.png" width="500">
+<img src="../img/sketch_players.png" width="500">
 
 The next visualisation is a graph of all the players, to provide a way to explore the dataset endlessly. The nodes would represent the players, and the games will be the links between them, if they have played one against the other. When clicking on the node or the link, there will be information about the player or the game displayed on the right. There will also be a possibility to filter on the games or players, to look at smaller graphs of interest.
 
-<img src="../assets/preview/sketch_timeline.png" width="500">
+<img src="../img/sketch_timeline.png" width="500">
 
 Finally, there will be a way to learn more about chess history and visualize events all over the world. There will be a timeline on the right that one can zoom in and out, select one event, read about it and visualize it geographically on the map.
 

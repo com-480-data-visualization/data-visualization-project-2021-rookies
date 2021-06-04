@@ -111,7 +111,7 @@ function selectImage(i) {
 
   // Display current piece
   var elem = document.createElement("img");
-  elem.src =  "../../../assets/img/chesspieces/current/"+pieces_img[pieces.indexOf(piece)]+".png";
+  elem.src =  "../../assets/img/chesspieces/current/"+pieces_img[pieces.indexOf(piece)]+".png";
   elem.style.width = '40%';
   document.getElementById("current-piece").appendChild(elem);
 
@@ -138,7 +138,7 @@ function selectImage(i) {
     document.getElementById("worstEnnemy").appendChild(t);
 
     var elem = document.createElement("img");
-    elem.src =  "../../../assets/img/chesspieces/wikipedia/"+pieces_img[pieces.indexOf(worstEnnemy[piece])]+".png";
+    elem.src =  "../../assets/img/chesspieces/wikipedia/"+pieces_img[pieces.indexOf(worstEnnemy[piece])]+".png";
     document.getElementById("worstEnnemy").appendChild(elem);
   }
 
@@ -147,7 +147,7 @@ function selectImage(i) {
   document.getElementById("favVictim").appendChild(t);
 
   var elem = document.createElement("img");
-  elem.src =  "../../../assets/img/chesspieces/wikipedia/"+pieces_img[pieces.indexOf(favVictim[piece])]+".png";
+  elem.src =  "../../assets/img/chesspieces/wikipedia/"+pieces_img[pieces.indexOf(favVictim[piece])]+".png";
   document.getElementById("favVictim").appendChild(elem);
 
   // Display nmoves and lifespan
