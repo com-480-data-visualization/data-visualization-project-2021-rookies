@@ -159,7 +159,7 @@ function update_active(isActive) {
 
 //Initialize the graph layouts and events with the JSON data
 function init_webpage(json_data) {
-  init_graph(json_data)
+  //init_graph(json_data)
   filterGraph(elem => (currentEloFilter(elem) && currentModeFilter(elem)))
   toggle_loading();
   //Loading every html element with their id in the arrays
