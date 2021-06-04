@@ -1,0 +1,113 @@
+#page {
+  display: flex;
+}
+
+#leftside {
+  flex: 8;
+}
+
+#filterContainer div {
+  margin: 0.5%;
+  margin-left: 1%;
+  font-weight: bold;
+}
+
+#graph-container {
+  height:850px;
+  margin: 1%;
+  padding:1%;
+  border-width:2px;
+  border-style:solid;
+  border-color:black;
+  border-radius: 3%;
+}
+
+#infobox {
+  height: 55%;
+}
+
+#chessboard-container h1 {
+  color : #ffb4a2;
+}
+#infobox h1 {
+  color : #ffb4a2;
+  padding: 1%;
+  margin:1%;
+}
+
+#infobox div p{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#infobox div a{
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#infobox div p:nth-child(2n+1) {
+  font-weight: bold;
+}
+
+#sidebar {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+#cy {
+  height: 800px;
+}
+
+#activeInfo {
+  font-style: italic;
+  margin: 1%;
+  padding:1%;
+}
+
+.infoboxline {
+  display: flex;
+  flex-direction: row;
+}
+
+.infoboxline p {
+  margin-right: 2%;
+}
+
+#loading p{
+  margin: auto; 
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#loading {
+  text-align: center;
+  color : #ffb4a2;
+}
+
+p, h1, div {
+    font-family: "Work Sans", sans-serif;
+}
+
+button:active{
+    background-color:#ffb4a2;
+    border-color:#ffb4a2;
+}
+.button-primary{
+    background-color:#ffb4a2;
+    border-color:#ffb4a2;
+}
+
+#chessboard-container button {
+  padding: 0 3%;
+}
+
+.slidecontainer {
+  display:flex;
+  flex-direction: row;
+}

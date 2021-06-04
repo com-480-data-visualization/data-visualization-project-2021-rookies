@@ -1,17 +1,44 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>Chess analysis</title>
+  <meta name="description" content="Chess analysis">
 
   <link href="../../styles.css" rel="stylesheet">
+  <link href="timeline.css" rel="stylesheet">
+  <link href="../common/back.css" rel="stylesheet">
 </head> 
 
 <body>
-    <button onclick="window.location = '../../index.html#Visualizations'">
-        Back
-    </button>
-    <div>
-        <img src='../../assets/preview/timeline.png'>
-    </div>
+    <nav class="nav-fillpath" style="background-color: #ffcdb2; margin-bottom: 20px;">
+        <a class="prev" href="../../index.html#Visualizations">
+            <span class="icon-wrap timeline"></span>
+            <div>Back</div>
+        </a>
+    </nav>
 
+    <div id='main-container'>
+        <div id='map-container'>
+            <svg id="map"></svg>
+        </div>
+        <div id='timeline-container'>
+            <div id='timeline'></div>
+            <div id='timeline-description'>
+                <div id="timeline-country" class="country"></div>
+                <div id="timeline-text" class="desc"></div>
+            </div>
+        </div>
+    </div>
+    <div id="tips-container">
+        <div id="tips-text" class="desc">Tips: Scroll over the timeline
+            to change the time scale. Drag the timeline to shift the time frame. 
+            Hover over the map to find each country's color. 
+            Scroll over the description when an anecdote is lengthy.
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="timeline.js"></script>
 </body>
 </html>

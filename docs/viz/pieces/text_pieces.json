@@ -1,0 +1,59 @@
+{ "descriptions" : {
+        "bR": "<div> The rook is a piece in the game of chess resembling a castle. Formerly the piece (from Persian رخ rokh/rukh, meaning chariot) was alternatively called the tower, marquess, rector, and comes (count or earl). </div>",
+        "bN": "<div> The knight is a piece in the game of chess and is represented by a horse's head and neck.</div>",
+        "bB": "<div> Originally depicted as an <div class=bold-color>elephant</div> (and still is in some languages), the bishop's shape is the tip of an elephant tusk. It was named a bishop in english by people who never saw an elephant and found the shape to look similar to a bishop's mitre.</div>",
+        "bQ": "<div> The queen is the most <div class=bold-color>powerful</div> piece in the game of chess, able to move any number of squares vertically, horizontally or diagonally, combining the power of the rook and bishop. </div>",
+        "bK": "<div> The king is the most <div class=bold-color>important</div> piece in the game of chess. </div>",
+        "bP": "<div> The pawn is the most <div class=bold-color>numerous</div> piece in the game of chess and, in most circumstances, the weakest. It historically represents infantry, or more particularly, armed peasants or pikemen.</div>",
+        "wR": "<div> The rook is a piece in the game of chess resembling a castle. Formerly the piece (from Persian رخ rokh/rukh, meaning chariot) was alternatively called the tower, marquess, rector, and comes (count or earl). </div>",
+        "wN": "<div> The knight is a piece in the game of chess and is represented by a horse's head and neck.</div>",
+        "wB": "<div> Originally depicted as an <div class=bold-color>elephant</div> (and still is in some languages), the bishop's shape is the tip of an elephant tusk. It was named a bishop in english by people who never saw an elephant and found the shape to look similar to a bishop's mitre.</div>",
+        "wQ": "<div> The queen is the most <div class=bold-color>powerful</div> piece in the game of chess, able to move any number of squares vertically, horizontally or diagonally, combining the power of the rook and bishop.</div>",
+        "wK": "<div> The king is the most <div class=bold-color>important</div> piece in the game of chess.</div>",
+        "wP": "<div> The pawn is the most <div class=bold-color>numerous</div> piece in the game of chess and, in most circumstances, the weakest. It historically represents infantry, or more particularly, armed peasants or pikemen</div>."
+    },
+  "textStartPos" : {
+    "bR": "<div>Each player starts the game with <div class=bold-color>two rooks</div>, one on each of the corner squares on their own side of the board. The white rooks start on squares a1 and h1, while the black rooks start on a8 and h8.</div>",
+    "bN": "<div>Each player starts with <div class=bold-color>two knights</div>, which are located between the rooks and bishops in the standard starting position</div>",
+    "bB": "<div>Each player begins the game with <div class=bold-color>two bishops</div>. One starts between the king's knight and the king, the other between the queen's knight and the queen.</div>",
+    "bQ": "<div>Each player starts the game with <div class=bold-color>one queen</div>, placed in the middle of the first rank next to the king. The white queen starts on d1, while the black queen starts on d8. With the chessboard oriented correctly, the white queen starts on a white square and the black queen starts on a black square—thus the mnemonics 'queen gets her color', 'queen on [her] [own] color', or 'the dress [queen piece] matches the shoes [square]'</div>",
+    "bK": "<div>Each player begins the game with <div class=bold-color>a king</div> of their color. The white king starts the game on e1; the black king starts on e8.</div>",
+    "bP": "<div>Each player begins a game with <div class=bold-color>eight pawns</div>, one on each square of the rank immediately in front of the other pieces.</div>",
+    "wR": "<div>Each player starts the game with <div class=bold-color>two rooks</div>, one on each of the corner squares on their own side of the board. The white rooks start on squares a1 and h1, while the black rooks start on a8 and h8.</div>",
+    "wN": "<div>Each player starts with <div class=bold-color>two knights</div>, which are located between the rooks and bishops in the standard starting position</div>",
+    "wB": "<div>Each player begins the game with <div class=bold-color>two bishops</div>. One starts between the king's knight and the king, the other between the queen's knight and the queen.</div>",
+    "wQ": "<div>Each player starts the game with <div class=bold-color>one queen</div>, placed in the middle of the first rank next to the king. The white queen starts on d1, while the black queen starts on d8. With the chessboard oriented correctly, the white queen starts on a white square and the black queen starts on a black square—thus the mnemonics 'queen gets her color', 'queen on [her] [own] color', or 'the dress [queen piece] matches the shoes [square]'</div>",
+    "wK": "<div>Each player begins the game with <div class=bold-color>a king</div> of their color. The white king starts the game on e1; the black king starts on e8.</div>",
+    "wP": "<div>Each player begins a game with <div class=bold-color>eight pawns</div>, one on each square of the rank immediately in front of the other pieces</div>."
+  },
+
+  "textMoves" : {
+    "bR": "<div>The rook moves <div class=bold-color>horizontally or vertically</div>, through any number of unoccupied squares. The rook cannot jump over pieces. As with captures by other pieces, the rook captures by occupying the square on which the enemy piece sits</div>",
+    "bN": "<div>Compared to other chess pieces, the knight's movement is unique: it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically, with both forming <div class=bold-color>the shape of an L</div>. This way, a knight can have a maximum of 8 moves. While moving, the knight can <div class=bold-color>jump over pieces</div> to reach its destination. Knights capture in the same way, replacing the enemy piece on the square and removing it from the board. Knights and pawns are the only pieces that can be moved in the initial position.</div>",
+    "bB": "<div>The bishop has no restrictions in distance for each move, but is limited to <div class=bold-color>diagonal movement</div>. Bishops, like all other pieces except the knight, cannot jump over other pieces. A bishop captures by occupying the square on which an enemy piece sits.</div>",
+    "bQ": "<div>The queen can be moved any number of unoccupied squares in a straight line <div class=bold-color>vertically, horizontally, or diagonally</div>, thus combining the moves of the rook and bishop. The queen captures by occupying the square on which an enemy piece sits.</div>",
+    "bK": "<div>A king can move <div class=bold-color>one square in any direction</div> (horizontally, vertically, or diagonally), unless the square is already occupied by a friendly piece, or the move would place the king in check. If a player's king is threatened with capture, it is said to be in check, and the player must remove the threat of capture on the next move. If this cannot be done, the king is said to be in checkmate, resulting in a loss for that player. </div>",
+    "bP": "<div>Unlike the other pieces, pawns <div class=bold-color>cannot move backwards</div>. \n Normally a pawn moves by advancing a single square, but the first time a pawn moves, it has the option of advancing two squares. Pawns may not use the initial two-square advance to jump over an occupied square, or to capture. Any piece immediately in front of a pawn, friend or foe, blocks its advance. Unlike other pieces, the pawn does not capture in the same direction that it moves. A pawn <div class=bold-color>captures diagonally</div> forward one square to the left or right </div>",
+    "wR": "<div>The rook moves <div class=bold-color>horizontally or vertically</div>, through any number of unoccupied squares. The rook cannot jump over pieces. As with captures by other pieces, the rook captures by occupying the square on which the enemy piece sits</div>",
+    "wN": "<div>Compared to other chess pieces, the knight's movement is unique: it may move two squares vertically and one square horizontally, or two squares horizontally and one square vertically, with both forming <div class=bold-color>the shape of an L</div>. This way, a knight can have a maximum of 8 moves. While moving, the knight can <div class=bold-color>jump over pieces</div> to reach its destination. Knights capture in the same way, replacing the enemy piece on the square and removing it from the board. Knights and pawns are the only pieces that can be moved in the initial position.</div>",
+    "wB": "<div>The bishop has no restrictions in distance for each move, but is limited to <div class=bold-color>diagonal movement</div>. Bishops, like all other pieces except the knight, cannot jump over other pieces. A bishop captures by occupying the square on which an enemy piece sits.</div>",
+    "wQ": "<div>The queen can be moved any number of unoccupied squares in a straight line <div class=bold-color>vertically, horizontally, or diagonally</div>, thus combining the moves of the rook and bishop. The queen captures by occupying the square on which an enemy piece sits.</div>",
+    "wK": "<div>A king can move <div class=bold-color>one square in any direction</div> (horizontally, vertically, or diagonally), unless the square is already occupied by a friendly piece, or the move would place the king in check. If a player's king is threatened with capture, it is said to be in check, and the player must remove the threat of capture on the next move. If this cannot be done, the king is said to be in checkmate, resulting in a loss for that player. </div>",
+    "wP": "<div>Unlike the other pieces, pawns <div class=bold-color>cannot move backwards</div>. \n Normally a pawn moves by advancing a single square, but the first time a pawn moves, it has the option of advancing two squares. Pawns may not use the initial two-square advance to jump over an occupied square, or to capture. Any piece immediately in front of a pawn, friend or foe, blocks its advance. Unlike other pieces, the pawn does not capture in the same direction that it moves. A pawn <div class=bold-color>captures diagonally</div> forward one square to the left or right</div> "
+  },
+  
+  "textStats" : {
+    "bR": "Some general stats about the Black Rook. The White Rook is its worst ennemy !",
+    "bN": "Some general stats about the Black Knight. The White Bishop is its worst ennemy !",
+    "bB": "Some general stats about the Black Bishop. The White Knight is its favorite meal !",
+    "bQ": "Some general stats about the Black Queen. Usually lives through three quarters of the whole game !",
+    "bK": "Some general stats about the Black King. It is never captured, as the game ends when its checkmate !",
+    "bP": "Some general stats about the Black Pawns. They move a lot : more than 9 moves on average for each pawn !",
+    "wR": "Some general stats about the White Rook. The Black Rook is its worst ennemy !",
+    "wN": "Some general stats about the White Knight. The Black Bishop is its worst ennemy !",
+    "wB": "Some general stats about the White Bishop. The Black Knight is its favorite meal !",
+    "wQ": "Some general stats about the White Queen. Usually lives through three quarters of the whole game !",
+    "wK": "Some general stats about the White King. Is never captured, as the game ends when its checkmate !",
+    "wP": "Some general stats about the White Pawns. They move a lot : more than 9 moves on average for each one !"
+  }
+}

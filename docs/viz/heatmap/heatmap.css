@@ -1,6 +1,15 @@
+:root{
+    --heatmap-color:#b5838d;
+}
+
+.bold{
+    color: var(--heatmap-color);
+    font-weight: 600;
+    display: inline;
+}
+
 #container{
     display:flex;
-    /* flex-direction: column; */
     justify-content: center;
     width:100%;
     height:100%;
@@ -33,15 +42,12 @@ text {
 #tips-container{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     padding-top: 10%;
     width: 50%;
-    /* background-color: antiquewhite; */
 }
 
 #tips-text{
     text-align: left;
-    /* font-style: italic; */
     width: 70%;
     height: 10%;
     padding: 0;
@@ -54,3 +60,17 @@ text {
     font-weight: 300;
     text-decoration: none;
 }
+
+button:active{
+    background-color:var(--heatmap-color);
+    border-color:var(--heatmap-color);
+}
+.button-primary{
+    background-color:var(--heatmap-color);
+    border-color:var(--heatmap-color);
+}
+.button-primary:focus, .button-primary:hover{
+    background-color:#9a6f77;
+    border-color:#9a6f77;
+}
+

@@ -2,15 +2,133 @@
 <head>
   <meta charset="utf-8">
 
+  <title>Graph exploration</title>
+  <meta name="description" content="Graph exploration">
+  <meta name="author" content="Ben">
+
+  <link href="../../libraries/chessboard-1.0.0.min.css" rel="stylesheet" >
   <link href="../../styles.css" rel="stylesheet">
+  <link href="./graph.css" rel="stylesheet">
+  <link href="../common/back.css" rel="stylesheet">
 </head> 
 
 <body>
-    <button onclick="window.location = '../../index.html#Visualizations'">
-        Back
-    </button>
-    <div>
-        <img src='../../assets/preview/graph.png'>
+    <div class="header" style="background-color: #ffb4a2; height: 20px; margin-bottom: 25px;"></div>
+      <nav class="nav-fillpath" style=>
+          <a class="prev" href="../../index.html#Visualizations">
+              <span class="icon-wrap graph"></span>
+              <div>Back</div>
+          </a>
+      </nav>
+    <div id="page">
+        <div id="leftside">
+            <div id="filterContainer">
+                <div id="modeFilter">
+                    Game mode
+                    <button id="filterModeBlitz" style="background-color: #DCDCDC;">
+                        Blitz
+                    </button>
+                    <button id="filterModeClassical" style="background-color: #DCDCDC;">
+                        Classical
+                    </button>
+                </div>
+                <div id="eloFilter">
+                    Players Elo
+                    <button id="filterElo1">
+                        1400-
+                    </button>
+                    <button id="filterElo2">
+                        1400-1600
+                    </button>
+                    <button id="filterElo3">
+                        1600-1800
+                    </button>
+                    <button id="filterElo4">
+                        1800+
+                    </button>
+                </div>
+            </div>
+            <div id="loading">
+                <p>Graph is loading...</p>
+            </div>
+            <div id='main-container'>
+                <div id='graph-container'>
+                    <div id="cy"></div>
+                    <p class="desc" style="width: 100%;">
+                        Try zooming in and out with the scroll wheel. You can also move around by maintaining click while not on an element of the graph. Click on an element to display data on the side.
+                    </p>
+                </div>
+            </div>
+            </div>
+        <div id='sidebar'>
+            <div id="infobox">
+                <h1>Player info</h1>
+                <div class="infoboxline">
+                    <p>Player's nickname</p> <p id='id'>Player's nickname</p>
+                </div>
+                <div class="infoboxline">
+                    <p>Player's elo</p><p id='Elo'>Player's elo</p>
+                </div>
+                <div class="infoboxline">
+                    <p>Link</p><a id='PlayerSite' href="#">Acces the player profile on Lichess</a>
+                </div>
+                <div class="infoboxline">
+                    <p>Played games</p><p id='nbrGames'>Games</p><p>Played time</p><p id='totalTime'>Total time</p>
+                </div>
+                <h1>Game info</h1>
+                <p id="activeInfo"> Select a game by clicking on the corresponding edge </p>
+                <div class="infoboxline">
+                    <p>Time Control</p><p id='TimeControl'>Time Control</p>
+                </div>
+                <div class="infoboxline">
+                    <p>Game Mode</p><p id='Mode'>Game Mode</p>
+                </div>
+                <div class="infoboxline">
+                    <p>Link</p><a id='Site' href="#">Acces the game on Lichess</a>
+                </div>
+                <div class="infoboxline">
+                    <p>Opening</p><p id='Opening'>Opening</p>
+                </div>
+                <div class="infoboxline">
+                    <p>White Elo</p><p id='wElo'>wElo</p>
+                    <p>Black Elo</p><p id='bElo'>bElo</p>
+                </div>
+                <div class="infoboxline">
+                    <p>White pseudo</p><p id='wPseudo'>Pseudo</p>
+                    <p>Black pseudo</p><p id='bPseudo'>Pseudo</p>
+                </div>
+                <div class="infoboxline">
+                    <p>Winner</p><p id="wWin">Winner Color</p>
+                </div>
+            </div>
+            <div id="chessboard-container">
+                <h1>Watch selected game</h1>
+                <div id="myBoard"></div>
+                <button id="playGame">Play</button>
+                <button id="pauseGame">Pause</button>
+                <button id="nextMove">Next</button>
+                <button id="resetBoard">Reset</button>
+                <div class="slidecontainer">
+                    <p>Play speed</p><input type="range" min="200" max="1500" value="500" class="slider" id="playSpeed">
+                    <!-- <p id="displaySpeed">500</p> -->
+                </div>
+            </div>
+        
     </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.2/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/avsdf-base/avsdf-base.js"></script>
+    <script src="../../libraries/cytoscape.js-avsdf-1.0.0/cytoscape-avsdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.0/bluebird.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="../../libraries/cytoscape.js-euler-1.2.2/cytoscape-euler.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../../libraries/chessboard-1.0.0.js"></script>
+    <script src="../../libraries/chess.js"></script>
+    
+
+    <script type="module" src="./graph.js"></script>
+    
 </body>
 </html>

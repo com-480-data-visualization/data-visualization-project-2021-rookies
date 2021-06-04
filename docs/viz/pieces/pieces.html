@@ -2,98 +2,117 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Stats on pieces</title>
+  <title>Chess Analysis</title>
   <meta name="description" content="Stats on pieces">
-  <meta name="author" content="Elisa">
-  <link href="../common/chessboard-1.0.0.min.css" rel="stylesheet" >
-  <link href="statspieces.css" rel="stylesheet">
+  <link href="../../libraries/chessboard-1.0.0.min.css" rel="stylesheet" >
+  <link href="pieces.css" rel="stylesheet">
   <link href="../common/back.css" rel="stylesheet">
   
 </head>
 
-</head> 
-
 <body>
-
-  <nav class="nav-fillpath" id="topline" style="max-height: 20px; background-color: #ffcdb2; position: fixed; z-index: 200;">
+  <nav class="nav-fillpath" id="topline" style="background-color: #e5989b; margin-bottom: 50px; position: fixed; z-index: 200;">
     <a class="prev" href="../../index.html#Visualizations">
-        <span class="icon-wrap"></span>
+        <span class="icon-wrap basics"></span>
         <div>Back</div>
     </a>
-  </nav>
+</nav>
 
-  <div class=pieces id=allPieces>
-      <img src="../../assets/img/chesspieces/wikipedia/bR.png" id = "piece-img-0" onclick="selectImage(0)">  
-      <img src="../../assets/img/chesspieces/wikipedia/bN.png" id = "piece-img-1" onclick="selectImage(1)">
-      <img src="../../assets/img/chesspieces/wikipedia/bB.png" id = "piece-img-2" onclick="selectImage(2)">
-      <img src="../../assets/img/chesspieces/wikipedia/bQ.png" id = "piece-img-3" onclick="selectImage(3)">
-      <img src="../../assets/img/chesspieces/wikipedia/bK.png" id = "piece-img-4" onclick="selectImage(4)">
-      <img src="../../assets/img/chesspieces/wikipedia/bP.png" id = "piece-img-5" onclick="selectImage(5)">
-      <img src="../../assets/img/chesspieces/wikipedia/wR.png" id = "piece-img-6" onclick="selectImage(6)">
-      <img src="../../assets/img/chesspieces/wikipedia/wN.png" id = "piece-img-7" onclick="selectImage(7)">
-      <img src="../../assets/img/chesspieces/wikipedia/wB.png" id = "piece-img-8" onclick="selectImage(8)">
-      <img src="../../assets/img/chesspieces/wikipedia/wQ.png" id = "piece-img-9" onclick="selectImage(9)">
-      <img src="../../assets/img/chesspieces/wikipedia/wK.png" id = "piece-img-10" onclick="selectImage(10)">
-      <img src="../../assets/img/chesspieces/wikipedia/wP.png" id = "piece-img-11" onclick="selectImage(11)">
+  <!-- The header for piece selection -->
+  <div class="pieces" id="allPieces">
+      <img src="../../../assets/img/chesspieces/wikipedia/bR.png" id = "piece-img-0" onclick="selectImage(0)">  
+      <img src="../../../assets/img/chesspieces/wikipedia/bN.png" id = "piece-img-1" onclick="selectImage(1)">
+      <img src="../../../assets/img/chesspieces/wikipedia/bB.png" id = "piece-img-2" onclick="selectImage(2)">
+      <img src="../../../assets/img/chesspieces/wikipedia/bQ.png" id = "piece-img-3" onclick="selectImage(3)">
+      <img src="../../../assets/img/chesspieces/wikipedia/bK.png" id = "piece-img-4" onclick="selectImage(4)">
+      <img src="../../../assets/img/chesspieces/wikipedia/bP.png" id = "piece-img-5" onclick="selectImage(5)">
+      <img src="../../../assets/img/chesspieces/wikipedia/wR.png" id = "piece-img-6" onclick="selectImage(6)">
+      <img src="../../../assets/img/chesspieces/wikipedia/wN.png" id = "piece-img-7" onclick="selectImage(7)">
+      <img src="../../../assets/img/chesspieces/wikipedia/wB.png" id = "piece-img-8" onclick="selectImage(8)">
+      <img src="../../../assets/img/chesspieces/wikipedia/wQ.png" id = "piece-img-9" onclick="selectImage(9)">
+      <img src="../../../assets/img/chesspieces/wikipedia/wK.png" id = "piece-img-10" onclick="selectImage(10)">
+      <img src="../../../assets/img/chesspieces/wikipedia/wP.png" id = "piece-img-11" onclick="selectImage(11)">
     </div>
     
     <section class='content'>
-
+      <!-- Row general description of piece -->
       <div class="row">
         <div class="column-for-text">
           <div id="current-piece"> </div>
         </div>
         <div class="column-for-text" id="general-piece-description">
-          Text about the piece in general
+          <!-- Text about the piece in general -->
         </div>
       </div>
 
+      <!-- Row starting position of piece -->
       <div class="row">
-        <div class="column-for-text" id="moves-description">
-            Text about how the piece moves
+        <div class="column-for-text" id="start-position">
+          <!-- Text about piece's starting position -->
         </div>
-        <div class="column-for-text" > <!-- style="border:5px inset #ffcdb2; border-style: solid solid solid solid; border-radius: 25px;"-->
+        <div class="column-for-text">
           <div class="content-chess" style="width:350px;" >
-            <div id="board1"></div>
+            <div id="board-start"></div>
           </div> 
         </div>
       </div>
 
+      <!-- Row piece's moves -->
       <div class="row">
+        <div class="column-for-text" > 
+          <div class="content-chess" style="width:350px;" >
+            <div id="board-moves"></div>
+            <div id="button-container">
+              <button id='captBtn'> Capture</button>
+              <button id='moveBtn'>Move</button>
+            </div>
+          </div> 
+        </div>
+        <div class="column-for-text" id="moves-description">
+          <!-- Text about how the piece moves -->
+        </div>
+      </div>
+
+      <!-- Row general stats on pieces -->
+      <div class="row">
+        <div class="column-for-text" id="stats-description" >
+          <!-- Text about stats on pieces ! -->
+        </div>
         <div class="column-for-text" >
           <div class="favVictim" id="favVictim"></div>
           <div class="worstEnnemy" id="worstEnnemy"></div>
           <div class="nMoves" id="nMoves"></div>
           <div class="lifespan" id="lifespan"></div>
         </div>
-        <div class="column-for-text" id="stats-description" >
-          Text about stats on pieces !
-        </div>
       </div>
 
+      <!-- Row precise stats on pieces -->
       <div class="row">
-        <div class="column-for-text" id="precise-stats-decription" >
-          More precise stats
-        </div>
         <div class="column"  style= "overflow-y: scroll">
           <div class="statsEats" id="stat-eat"></div>
           <div class="statsEatenBy" id="stat-eaten-by"></div>
+        </div>
+        <div class="column-for-text" id="precise-stats-decription" >
+          <!-- More precise stats -->
         </div>
       </section>
 
     </div>
 
-   
+    <div id="tips-container">
+      <div id="tips-text" class="desc">Tips: Select a different piece on the top menu.
+      </div>
+    </div>
 
     <script>
-      window.onscroll = function() {myFunction()};
-  
+        // sticky header
         var header = document.getElementById("allPieces");
         var topline = document.getElementById("topline");
-        var sticky = header.offsetTop;
+        var offset = header.offsetHeight;
         
+        window.onscroll = function() {myFunction()};
         function myFunction() {
-          if (window.pageYOffset > sticky) {
+          if (window.pageYOffset >= 0) {
             header.classList.add("sticky");
           } else {
             header.classList.remove("sticky");
@@ -104,12 +123,39 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="../common/chessboard.js"></script>
-    <script src="../pieces/percentage_bar.js"></script>
+    <script src="../../libraries/chessboard.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../common/chessboard-1.0.0.min.js"></script>
-    <script src="../common/chess.js"></script>
+    <script src="../../libraries/chessboard-1.0.0.min.js"></script>
+    <script src="../../libraries/chess.js"></script>
+    <script src="pieces.js"></script>
     
+    <script type = "text/javascript">
+      $(document).ready(function(){
+        showOnScroll("#general-piece-description");
+        showOnScroll("#start-position");
+        showOnScroll("#moves-description");
+        showOnScroll("#stats-description");
+        showOnScroll("#precise-stats-decription");
+      });
+
+    function showOnScroll(divId) {
+        var div = $(divId);
+        //Take the current position (vertical position from top) of your div in the variable
+        var pos = div.position();
+        //Now when scroll event trigger do following
+        $(window).scroll(function () {
+            var windowpos = $(window).scrollTop();
+            //Now if you scroll more than 400 pixels vertically change the class to AfterScroll
+            if (windowpos <= (pos.top - 400)){
+                div.addClass("column-for-text-hidden");
+            }
+            else {
+                div.removeClass("column-for-text-hidden");
+            }
+        });
+    };
+
+      </script>
 
 </body>
 </html>

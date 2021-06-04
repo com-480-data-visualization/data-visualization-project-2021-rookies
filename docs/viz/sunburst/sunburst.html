@@ -2,36 +2,112 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Sequences sunburst</title>
+    <title>Chess analysis</title>
+  <meta name="description" content="Chess analysis">
     
     <link rel="stylesheet" type="text/css"
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
-    <link rel="stylesheet" type="text/css" href="sunburst.css"/>
+    <link href="sunburst.css" rel="stylesheet"/>
     <link href="../../styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="../common/chessboard.css">
+    <link href="../common/chessboard.css" rel="stylesheet">
+    <link href="../common/back.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://www.dl.dropboxusercontent.com/s/bqe64u1e2ohl85o/jonisalert.css" rel="stylesheet">
 
   </head>
   <body>
-      <button onclick="window.location = '../../index.html#Visualizations'">
-          Back
-      </button>
-        
-      <div>
-        <img src='../../assets/preview/sunburst.png'>
-    </div>  
-        <div id="chess-container">
-            <div id="myBoard" style="width: 100%; max-width:400px; max-height: 400;"></div>
-            <div id="button-container">
-                <button id="undo-button">Undo</button>
-                <button id="reset-button">Reset</button>
-            </div>
+      <div class="header" style="background-color: #6d6875; height: 20px; margin-bottom: 25px;"></div>
+      <nav class="nav-fillpath" style=>
+          <a class="prev" href="../../index.html#Visualizations">
+              <span class="icon-wrap sunburst"></span>
+              <div>Back</div>
+          </a>
+      </nav>
+      
+        <div id="fullpage">
+            <section id="sunburst-container"  class="section">
+                <div id="sequence"></div>
+                <div id="row">
+                    <div id="chart">
+                        <div id="explanation-container">
+                            <div id="explanation" style="visibility: hidden;">
+                                <span id="percentage"></span><br/>
+                                <span style="font-size:0.8em">of games begin with this opening</span><br/>
+                                <span id="opening"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="chess-container">
+                        <div id="myBoard" style="width: 100%; max-width:400px; max-height: 400;"></div>
+                        <div id="button-container">
+                            <button id="undo-button">Undo</button>
+                            <button id="reset-button">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tips-container">
+                    <div class="tips-text">
+                        <i>Tips: Hover over the sunburst plot to explore the openings in the dataset. The i-th ring
+                            corresponds the the i-th move in the openings (up to 7 moves).
+                            The name of the moves along with the win rate (i.e., the color) are displayed in the 
+                            top left sequence. Move the pieces on the board to try your own openings.
+                        </i>
+                    </div>
+                    
+                </div>
+                <a href="#Conclusion" class="scroll down mouse effect1 dark" style="bottom: 50;">
+                    <label>Scroll</label>
+                </a>
+            </section>
+
+            <section id="scene2"  class="section">
+                <div class="tips-text conclusion-text">An interesting <div class=bold>insight</div> from this visualization is how common and 
+                <div class=bold>regular</div> openings are: most games start by the same sequence of moves. If you try some arbitrary openings, you will quickly see
+                    that most of them occured very few times compared to the most commons. <br><br>
+                    <div class=bold>Conclusion:</div> know the classical openings before trying your own ones.</div>
+            </section>
         </div>
 
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="../../libraries/chessboard.js"></script>
     <script src="../../libraries/chess.js"></script>
     <script src="sunburst.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
+    <script src="https://www.dl.dropboxusercontent.com/s/tz85x4fc8vn9ayl/JonisAlert.min.js"></script>
+    <script>
+        if (navigator.userAgent.indexOf("Firefox") == -1 ) {
+            ja({
+                type: "warn",
+                animation: "rotateX",
+                html: "<b style='font-size: 30px;'>Consider using Firefox<br>for a smoother experience.</b><br>",
+                continueButtonHtml: "Got it!",
+            });
+        }
+        $(document).ready(function () {
+            $("#fullpage").fullpage({
+                navigation: false,
+                slidesNavigation: false,
+                controlArrows: false,
+                verticalCentered: false,
+                anchors: ["Sunburst", "Conclusion"],
+                onLeave: function(origin, destination, direction){
+                    $(".scroll").css("transition", "0.3s").css("opacity", 0)
+                    if(origin.index == 0 && direction =='down') {
+                        $("button,.header,nav").css("transition", "0.3s").css("opacity", 0)
+                    }
+                    if(origin.index == 1 && direction =='up') {
+                        $("button,.header,nav").css("transition", "2s").css("opacity", 1)
+                    }
+                },
+                afterLoad: function(event){
+                    $(".scroll").css("transition", "2s").css("opacity", 1)
+                }
+            })
+        });
+    </script>
 
   </body>
 </html>

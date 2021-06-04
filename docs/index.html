@@ -15,9 +15,9 @@
     <div class="overlay-navigation">
         <nav role="navigation">
             <ul>
-                <li><a href="./viz/pieces/pieces.html" data-content="Learn more about chess pieces">Basics</a></li>
                 <li><a href="./viz/timeline/timeline.html" data-content="A geographical timeline of chess history">Timeline</a></li>
                 <li><a href="./viz/graph/graph.html" data-content="Explore the games in the dataset">Dataset</a></li>
+                <li><a href="./viz/pieces/pieces.html" data-content="Learn more about chess pieces">Basics</a></li>
                 <li><a href="./viz/heatmap/heatmap.html" data-content="How important is board control?">Position</a></li>
                 <li><a href="./viz/sunburst/sunburst.html" data-content="How do the first moves influence the game?">Openings</a></li>
             </ul> 
@@ -38,7 +38,6 @@
         </section>
         
         <section id="section1" class="section">
-            <!-- <div class="title">Scene 1</div> -->
             <div class="desc">
                 <div class="desc-title">Welcome on Chess Analysis</div>
                 <div class="desc-text">Our objective is to provide data-driven insights, discover new facts and
@@ -52,13 +51,13 @@
                 <label>Scroll</label>
                 <span></span>
             </a>
-            <!-- <div class="open-overlay"></div> -->
         </section>
 
         <section id="section2" class="section"></section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.0/fullpage.min.js"></script>
+    <script src="scripts.js"></script>
     <script>
         $(document).ready(function () {
             $("#fullpage").fullpage({
@@ -74,9 +73,9 @@
                     if(origin.index == 2 && direction =='up' && overlay_active) closeOverlay()
                 },
                 afterLoad: function(event){
-                    $(".scroll, .title, .desc-title").css("transition", "2s").css("opacity", 1)
+                    $(".title, .desc-title").css("transition", "2s").css("opacity", 1)
                     $(".desc-text").css("transition", "1s 1s").css("opacity", 1)
-                    // console.log(event)
+                    $(".scroll").css("transition", "1.5s 1s").css("opacity", 1)
                 }
             })
             const onVizSection = window.location.href.includes("#Visualizations")

@@ -19,6 +19,10 @@ nav a svg {
 	padding: 0;
 }
 
+.nav-fillpath {
+    max-height: 20px;
+}
+
 .nav-fillpath a {
 	width: 50px;
 	height: 50px;
@@ -51,13 +55,19 @@ nav a svg {
 
 .nav-fillpath .icon-wrap::before,
 .nav-fillpath .icon-wrap::after {
-    
 	z-index: 100;
 	height: 0;
-	background: #b5838d;
+	/* background: white; */
 	-webkit-transition: height 0.3s, -webkit-transform 0.3s;
 	transition: height 0.3s, transform 0.3s;
 }
+
+.nav-fillpath .timeline::before, .nav-fillpath .timeline::after {background: #ffcdb2;}
+.nav-fillpath .graph::before, .nav-fillpath .graph::after {background: #ffb4a2;}
+.nav-fillpath .basics::before, .nav-fillpath .basics::after {background: #e5989b;}
+.nav-fillpath .heatmap::before, .nav-fillpath .heatmap::after {background: #b5838d;}
+.nav-fillpath .sunburst::before, .nav-fillpath .sunburst::after {background: #6d6875;}
+
 
 .nav-fillpath a::before,
 .nav-fillpath .icon-wrap::before {
@@ -123,16 +133,4 @@ nav a svg {
 	opacity: 1;
 	-webkit-transform: translateY(-50%) translateX(0);
 	transform: translateY(-50%) translateX(0);
-}
-
-.back-text{
-    color:#777;
-    text-transform: uppercase;
-    font-family: 'Work sans', sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
 }

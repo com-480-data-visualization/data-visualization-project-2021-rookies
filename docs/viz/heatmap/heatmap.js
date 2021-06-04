@@ -13,8 +13,7 @@ var svg = d3.select("#heatmap")
         "translate(" + margin.left + "," + margin.top + ")");
 
 //Read the data
-// d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv", function(data) {
-d3.csv("../../data/heatmap1split.csv", function(data) {
+d3.csv("heatmap1split.csv", function(data) {
 
   // Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
   var myGroups = d3.map(data, function(d){return d.group;}).keys()
