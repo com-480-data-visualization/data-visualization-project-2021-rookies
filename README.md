@@ -32,6 +32,7 @@ You can find the process book as well as the different milestones below.
 ├───img                 Images used in milestones
 ├───reports             Milestones and process book
 ├───notebooks           Notebooks used for preprocessing
+├───assets              Images used in the website
 └───docs                Website top folder
      ├───libraries      Libraries used in the project       
      ├───viz            Folder containing the 5 visualizations
