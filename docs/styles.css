@@ -28,7 +28,7 @@ section {
       }
 
 #intro{
-  background-image: url(../assets/img/wallpaper.jpg);
+  background-image: url(./assets/img/wallpaper.jpg);
   padding: 50px;
   justify-content: flex-end;
   align-items: flex-start;
